@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Lobster&display=swap" rel="stylesheet">
+    <title>Kharkiv - the best city</title>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+            font-family: 'Exo 2', sans-serif;
+            padding-left: 0;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+
+        #mainNavbar {
+            font-size: 1.5rem;
+            font-weight: 100;
+        }
+
+        #mainNavbar .nav-link {
+            color: white;
+            display: flex;
+            justify-content: end;
+
+            background: none;
+
+        }
+
+        #mainNavbar .nav-link:hover {
+            color: #1c3eea;
+        }
+
+        #mainNavbar .navbar-brand {
+            color: #1c3eea;
+            font-size: 1.5rem;
+            font-family: 'Lobster', cursive, sans-serif;
+        }
+
+        #mainSection {
+
+            border-radius: 10px;
+        }
+
+        #main-section a {
+            position: absolute;
+
+        }
+
+        #about img {
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 8px 8px 8px rgb(15, 15, 15);
+        }
+
+        #mainHeader {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            ;
+        }
+
+        #about {
+            padding-right: 30px;
+        }
+
+        #about a {
+            text-align: center;
+            margin: auto;
+            color: white;
+        }
+
+        #about a:hover {
+            color: #1c3eea;
+        }
+
+        footer {
+            width: auto;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .centered {
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            font-size: 2rem;
+
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+
+
+
+        .second p {
+            position: absolute;
+            bottom: 5%;
+            left: 10%;
+            font-size: 2rem;
+        }
+
+        .topic {
+            position: absolute;
+            margin: 5px;
+            top: 10%;
+            left: 10%;
+            font-size: 2rem;
+            width: 40%;
+            background: rgba(11, 11, 11, 0.681);
+            color: antiquewhite;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 8px 8px 8px rgb(15, 15, 15);
+        }
+
+        .top {
+            visibility: hidden;
+
+        }
+
+        footer img {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media(max-width: 986px) {
+            .second p {
+                font-size: 4rem;
+            }
+
+            h1 {
+                padding: 0;
+                font-size: 2rem;
+            }
+
+            .top {
+                visibility: visible;
+                color: white;
+            }
+        }
+
+        @media(min-width: 784px) {
+            .second img {
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <nav id="mainNavbar" class="navbar navbar-dark bg-transparent navbar-expand-md py-0 fixed-top">
+        <a href="#" class="navbar-brand">KHARKIV</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse bg-transparent justify-content-end" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#mainSection" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacts" class="nav-link">CONTACTS</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <section class="container-fluid" id="mainSection">
+        <div class="row">
+            <div> <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/405/original/pexels-sergey-mart-13377064.jpg?1668746842"
+                    class="img-fluid" alt="">
+                <div class="card topic d-none d-lg-block">
+                    <div class="card-body">
+
+
+                        <p class="card-text">Kharkiv is a major cultural, scientific, educational,
+                            transport and
+                            industrial centre
+                            of Ukraine, with numerous museums, theatres and libraries, including the Annunciation and
+                            Dormition
+                            Cathedrals, the Derzhprom building in Freedom Square, and the National University of
+                            Kharkiv.
+                            Industry plays a significant role in Kharkiv's economy, specialised primarily in machinery
+                            and
+                            electronics.</p>
+                        <div class="btn-group py-2">
+                            <a href="https://en.wikipedia.org/wiki/Kharkiv" class="btn btn-info card-link">Learn
+                                more</a>
+                            <a href="https://www.city.kharkov.ua/uk/novosti.html" class="btn btn-info card-link"
+                                target="_blank">News
+                                from
+                                Kharkiv</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <div class="top p-3">
+        <p class="d-lg-block">Kharkiv is a major cultural, scientific, educational, transport and
+            industrial centre
+            of Ukraine, with numerous museums, theatres and libraries, including the Annunciation and
+            Dormition
+            Cathedrals, the Derzhprom building in Freedom Square, and the National University of Kharkiv.
+            Industry plays a significant role in Kharkiv's economy, specialised primarily in machinery and
+            electronics.</p>
+        <div class="btn-group py-2">
+            <a href="https://en.wikipedia.org/wiki/Kharkiv" class="btn btn-info card-link">Learn
+                more</a>
+            <a href="https://www.city.kharkov.ua/uk/novosti.html" class="btn btn-info card-link">News
+                from
+                Kharkiv</a>
+        </div>
+
+
+    </div>
+    <section id="mainHeader" class="container-fluid bg-dark">
+        <h1 class="text-center">Visit famous places</h1>
+    </section>
+    <section id="about" class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://en.wikipedia.org/wiki/Kharkiv_National_Academic_Opera_and_Ballet_Theatre"><img
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/404/original/oleksandr-zhabin-OXXuYIR4jjw-unsplash.jpg?1668746826"
+                        class="img-fluid" alt="">
+                    <p class="centered">
+                        National Theatre of Opera and Balet</p>
+                </a>
+
+
+            </div>
+
+            <div class="col-md-4 ">
+
+                <a href="https://en.wikipedia.org/wiki/Kharkiv_International_Airport">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/401/original/astorin-gica7mpu3s0-unsplash.jpg?1668746792"
+                        class="img-fluid" alt="">
+                    <p class="centered">Kharkiv Airport</p>
+                </a>
+            </div>
+            <div class="col-md-4">
+
+                <a
+                    href="https://uk.wikipedia.org/wiki/%D0%93%D1%96%D0%BC%D0%BD%D0%B0%D0%B7%D1%96%D0%B9%D0%BD%D0%B0_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0_(%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2)"><img
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/406/original/taras-zaluzhnyi-pk-TX7_XCjo-unsplash.jpg?1668746854"
+                        class="img-fluid" alt="">
+                    <p class="centered">Kharkiv embankment</p>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="row second">
+            <div class="col-md-6">
+                <a
+                    href="https://uk.wikipedia.org/wiki/%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0_%D0%BA%D0%B0%D0%BD%D0%B0%D1%82%D0%BD%D0%B0_%D0%B4%D0%BE%D1%80%D0%BE%D0%B3%D0%B0"><img
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/400/original/anna-hunko-u3LGAC3lCro-unsplash.jpg?1668746762"
+                        class="img-fluid" alt="">
+                    <p class="centered">Cableway</p>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="https://en.wikipedia.org/wiki/Park_of_Maxim_Gorky"><img
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/402/original/bogdan-yukhymchuk-Altljf5QtJg-unsplash.jpg?1668746804"
+                        class="img-fluid" alt="">
+                    <p class="centered">Gorkyi Park</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <p class="display-5 text-center py-3">Coded by Anna Sirotkina </p>
+        <p><a href="https://standforukraine.com/" class="btn btn-info my-1 mx-2"><img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/403/original/flag-of-ukraine.png?1668746812"
+                    class="img-fluid">Stand For Ukraine</a>
+        </p>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
